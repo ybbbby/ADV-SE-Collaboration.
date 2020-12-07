@@ -7,9 +7,9 @@ matrix:
         - cd frontend
         - yarn install
       script:
-        - yarn test --coverage --key=$GMAP_KEY
-      after_script:
-        - COVERALLS_REPO_TOKEN=1zhoh7CB1VGzg1Z2BC1R6DuVe8kTBObpP yarn coveralls
+        - yarn test --coverage --REACT_APP_GMAP_KEY=$GMAP_KEY
+      after_success:
+        - yarn coveralls
 
     - language: python
       python: 3.7
@@ -35,7 +35,5 @@ matrix:
         - coveralls
 
 notifications:
-  email:
-    - dq2146@columbia.edu
   webhooks:
     - https://coveralls.io/webhook

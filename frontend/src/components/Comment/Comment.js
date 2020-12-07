@@ -88,7 +88,6 @@ export default function AlignItemsList(props) {
           channel: eventHost,
           message: `${user} adds a new comment: ${text}`,
         })
-        console.log(id)
         setComments([
           {
             user: user,

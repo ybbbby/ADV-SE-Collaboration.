@@ -35,7 +35,7 @@ class LocationSearchInput extends React.Component {
     gmapScriptEl.src =
       `https://maps.googleapis.com/maps/api/js?key=` +
       // eslint-disable-next-line no-undef
-      process.env.key +
+      process.env.REACT_APP_GMAP_KEY +
       `&libraries=places&callback=initMap`
     document
       .querySelector(`body`)

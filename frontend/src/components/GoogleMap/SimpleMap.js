@@ -23,7 +23,7 @@ class SimpleMap extends Component {
       <div style={{ height: '30vh', width: '100%' }}>
         <GoogleMapReact
           // eslint-disable-next-line no-undef
-          bootstrapURLKeys={{ key: process.env.key }}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GMAP_KEY }}
           center={this.props.center ? this.props.center : this.state.center}
           defaultZoom={this.state.zoom}
         >
